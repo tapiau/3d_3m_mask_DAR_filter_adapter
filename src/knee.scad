@@ -1,0 +1,33 @@
+module knee()
+{
+    difference()
+        {
+            union()
+                {
+                    sphere(r=13);
+                    rotate([60,0,0])
+                        {
+                            cylinder(r1=13,r2=13.5,h=20);
+                        }
+                }
+            union()
+                {
+                    sphere(r=11);
+                    rotate([60,0,0])
+                        {
+                            cylinder(r1=11,r2=11,h=21);
+                            translate([0,0,17])
+                                cylinder(r1=11,r2=11.5,h=4);
+                        }
+                    rotate([180,0,0])
+                        {
+                            cylinder(r1=11,r2=13,h=10);
+                        }
+                    rotate([180,0,0])
+                        {
+                            cylinder(r=11,h=16);
+                        }
+                }
+        }
+}
+
